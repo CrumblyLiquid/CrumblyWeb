@@ -1,0 +1,209 @@
+$dominant: #006b9b;
+$compliment: #a6b2be;
+$additional: #3a4856;
+$tone: #282c34;
+
+html, body {
+    font-size: 1.2em;
+    height: 100%;
+    margin: 0;
+    font-family: 'JetBrains Mono';
+    background-color: $tone;
+    color: $dominant;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.compliment {
+    color: $compliment;
+}
+
+.aditional {
+    color: $additional
+}
+
+header {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+
+    margin: 0.8em;
+
+    gap: 2vw;
+
+    logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        img {
+            height: 2em;
+            width: auto;
+        }
+    }
+    nav {
+        // flex-grow: 1;
+        margin-left: 2vw;
+        margin-right: 2vw;
+
+        ul {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            // font-size: clamp(3vw, 1.2em);
+            gap: 3vw;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+
+        nav {
+            ul {
+                font-size: 4vw;
+            }
+        }
+    }
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 4vh 8vw;
+    gap: 4vh;
+
+    logo {
+        img {
+            // height: clamp(15vw, 3em);
+            width: 12em;
+        }
+    }
+
+    intro {
+        font-size: larger;
+        // margin-bottom: 4vh;
+    }
+
+    about, languages, projects {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        margin-left: 2vw;
+        gap: 0.2rem;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            margin-left: 2vw;
+            gap: 0.2rem;
+            li:before {
+                content: '>';
+                margin-right: 4px;
+            }
+            li {
+              color: $compliment;
+            }
+        }
+
+        p {
+            white-space: pre-line;
+            text-align: center;
+        }
+
+        a {
+          color: inherit;
+        }
+    }
+}
+
+.waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+
+    .parallax {
+        #wave1 {
+            fill: rgba($color: $dominant, $alpha: 0.7);
+        }
+        #wave2 {
+            fill: rgba($color: $dominant, $alpha: 0.5);
+        }
+        #wave3 {
+            fill: rgba($color: $dominant, $alpha: 0.3);
+        }
+        #wave4 {
+            fill: $dominant;
+        }
+    }
+
+    //   .content {
+    //     position:relative;
+    //     height:20vh;
+    //     text-align:center;
+    //     background-color: white;
+    //   }
+
+    /* Animation */
+
+    .parallax > use {
+        animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+    }
+    .parallax > use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 7s;
+    }
+    .parallax > use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 10s;
+    }
+    .parallax > use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 13s;
+    }
+    .parallax > use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 20s;
+    }
+
+    @keyframes move-forever {
+        0% {
+            transform: translate3d(-90px,0,0);
+        }
+        100% {
+            transform: translate3d(85px,0,0);
+        }
+    }
+
+    /*Shrinking for mobile*/
+    @media (max-width: 768px) {
+        .waves {
+            height:40px;
+            min-height:40px;
+        }
+        // .content {
+        //     height:30vh;
+        // }
+        // h1 {
+        //     font-size:24px;
+        // }
+    }
+}

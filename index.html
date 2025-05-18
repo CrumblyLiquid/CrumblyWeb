@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crumbly[liquid]</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="liquid.css">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <script src="stuff.js"></script>
+</head>
+<body>
+    <header>
+        <logo>
+            <img src="logo.png" class="logo-small">
+            crumblyliquid
+        </logo>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        home<span class="compliment">[0]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        blog<span class="compliment">[1]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/CrumblyLiquid">
+                        code<span class="compliment">[2]</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:crumblyliquid@gmail.com">
+                        contact<span class="compliment">[3]</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <intro>
+            <span class="compliment">let me =</span> crumbly<span class="compliment">::</span>liquid()<span class="compliment">;</span>
+        </intro>
+        <about>
+            <div>
+                <span class="compliment">me.</span>about()<span class="compliment">;</span>
+            </div>
+            <ul>
+                <li>
+                    programmer
+                </li>
+                <li>
+                    open-source enthusiast
+                </li>
+            </ul>
+        </about>
+        <languages>
+            <div>
+                <span class="compliment">me.</span>languages()<span class="compliment">;</span>
+            </div>
+            <ul>
+                <li>
+                    <a href="https://github.com/TodePond/GulfOfMexico">
+                        berd
+                    </a>
+                </li>
+                <li>
+                    rust
+                </li>
+                <li>
+                    c
+                </li>
+                <li>
+                    c++
+                </li>
+                <li>
+                    python
+                </li>
+            </ul>
+        </languages>
+        <languages>
+            <div>
+                <span class="compliment">me.</span>projects()<span class="compliment">;</span>
+            </div>
+            <ul>
+                <li>
+                    <a href="https://github.com/CrumblyLiquid/BakkesLinux">
+                        BakkesLinux
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/CrumblyLiquid/xim">
+                        Xim
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/CrumblyLiquid/kospes">
+                        KOSPes
+                    </a>
+                </li>
+                <li>
+                        Songbook
+                </li>
+            </ul>
+        </languages>
+    </main>
+    <!--Waves Container-->
+    <!-- Stolen from here: https://codepen.io/goodkatz/pen/LYPGxQz -->
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use id="wave1" xlink:href="#gentle-wave" x="48" y="0" />
+                <use id="wave2" xlink:href="#gentle-wave" x="48" y="3" />
+                <use id="wave3" xlink:href="#gentle-wave" x="48" y="5" />
+                <use id="wave4" xlink:href="#gentle-wave" x="48" y="7" />
+            </g>
+        </svg>
+    </div>
+</body>
+</html>
