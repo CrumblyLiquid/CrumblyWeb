@@ -2,3 +2,7 @@
 
 *.css
 *.css.map
+
+# Nix flake
+
+result
